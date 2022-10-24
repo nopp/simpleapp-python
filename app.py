@@ -10,6 +10,10 @@ def index():
 def health():
     return jsonify({'success':True})
 
+@app.route('/version')
+def version():
+    return jsonify(msg='Version 1.0')
+
 @app.route('/code')
 def code():
     if "Code" in os.environ:
